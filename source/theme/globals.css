@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--paletteColor2);
+
+    font-family: roboto mono, roboto, system-ui;
+    font-smoothing: antialiased;
+    font-variant-ligatures: none;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    min-height: 100vh;
+
+    & section {
+        width: 100%;
+    }
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 4%;
+    user-select: none;
+    min-height: 100vh;
+}

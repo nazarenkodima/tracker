@@ -1,3 +1,6 @@
+:root {
+    --cWidth: 560px;
+}
 * {
     box-sizing: border-box;
     outline: 0;
@@ -11,7 +14,7 @@ body {
 body {
     background-color: var(--paletteColor2);
 
-    font-family: roboto mono, roboto, system-ui;
+    font-family: 'PT Sans', sans-serif;
     font-smoothing: antialiased;
     font-variant-ligatures: none;
     -moz-text-size-adjust: 100%;
@@ -24,11 +27,15 @@ body {
     }
 }
 
-#app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 4%;
-    user-select: none;
-    min-height: 100vh;
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (--desktop) {
+  .container {
+      max-width: var(--cWidth);
+  }
+
 }

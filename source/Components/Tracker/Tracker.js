@@ -75,7 +75,7 @@ export default class Tracker extends Component {
 
   render() {
     const { newTimerName, trackers } = this.state;
-    const trackersJSX = trackers.sort((a,b) => b.timeStamp - a.timeStamp).map((tracker) => (
+    const trackersJSX = trackers.sort((a,b) => a.timeStamp - b.timeStamp).map((tracker) => (
       <Timer
         key={tracker.id}
         name={tracker.name}

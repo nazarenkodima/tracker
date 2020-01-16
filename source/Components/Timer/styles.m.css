@@ -1,0 +1,50 @@
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 17px 0 17px 20px;
+    border-bottom: 1px solid var(--paletteColor6);
+
+    &:nth-child(1) {
+        border-top: 1px solid var(--paletteColor6);
+    }
+
+    & .name {
+        flex: 2 0;
+    }
+
+    & .time {
+        flex: 1 0;
+    }
+
+    & .actions,
+    & .name,
+    & .time {
+        display: flex;
+        align-items: center;
+
+
+        & svg {
+            cursor: pointer;
+            &:nth-child(2) {
+                margin-left: 15px;
+                fill: var(--paletteColor5)
+            }
+        }
+    }
+
+
+}
+
+.isRunning{
+    color: var(--paletteColor3);
+    font-weight: bold;
+    background-color: var(--paletteColor4);
+}
+
+@media (--mobile) {
+    .timer {
+        padding: 17px 20px;
+    }
+}

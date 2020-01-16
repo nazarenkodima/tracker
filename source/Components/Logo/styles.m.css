@@ -1,0 +1,21 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 66px;
+    margin-bottom: 68px;
+
+    & h1 {
+        font-size: 38px;
+        font-weight: bold;
+        text-transform: lowercase;
+        transition: font-size 0.3s ease-in;
+    }
+}
+
+@media (--desktop) {
+    .logo {
+        & h1 {
+            font-size: 48px;
+        }
+    }
+}

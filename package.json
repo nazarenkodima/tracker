@@ -20,12 +20,14 @@
   "dependencies": {
     "@hot-loader/react-dom": "^16.11.0",
     "classnames": "~2.2.6",
+    "moment": "^2.24.0",
     "normalize.css": "^8.0.1",
     "react": "16.8.3",
     "react-dom": "16.8.1",
     "react-hot-loader": "4.12.18",
     "react-router-dom": "^5.1.2",
-    "react-spring": "^7.2.11"
+    "react-spring": "^7.2.11",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
     "@babel/core": "7.7.4",
@@ -37,6 +39,7 @@
     "@babel/preset-env": "~7.0.0-beta.54",
     "@babel/preset-react": "~7.0.0-beta.54",
     "@babel/register": "~7.0.0-beta.54",
+    "@svgr/cli": "^5.0.1",
     "babel-core": "^7.0.0-0",
     "babel-eslint": "~8.2.6",
     "babel-loader": "^8.0.6",

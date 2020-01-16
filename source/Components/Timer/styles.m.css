@@ -33,8 +33,15 @@
             }
         }
     }
+
+
 }
 
+.isRunning{
+    color: var(--paletteColor3);
+    font-weight: bold;
+    background-color: var(--paletteColor4);
+}
 
 @media (--mobile) {
     .timer {

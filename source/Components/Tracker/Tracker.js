@@ -22,6 +22,8 @@ export default class Tracker extends Component {
         trackers: [...tracker, ...trackers],
       }));
     }
+
+    this.trackerInput.focus();
   }
 
   updateNewTrackerName = (event) => {
@@ -75,7 +77,7 @@ export default class Tracker extends Component {
 
   render() {
     const { newTimerName, trackers } = this.state;
-    const trackersJSX = trackers.sort((a,b) => a.timeStamp - b.timeStamp).map((tracker) => (
+    const trackersJSX = trackers.sort((a,b) => b.timeStamp - a.timeStamp).map((tracker) => (
       <Timer
         key={tracker.id}
         name={tracker.name}
@@ -96,6 +98,7 @@ export default class Tracker extends Component {
               type="text"
               value={newTimerName}
               onChange={this.updateNewTrackerName}
+              ref={(input) => { this.trackerInput = input; }}
             />
             <button className={Styles.submitButton} type="submit">
               <SvgPlayArrow />

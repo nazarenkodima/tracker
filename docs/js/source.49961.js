@@ -5802,7 +5802,6 @@ function (_Component) {
     defineProperty_default()(assertThisInitialized_default()(_this), "startTimer", function () {
       newArrowCheck_default()(this, _this2);
 
-      // this.handleTrackerTime();
       _this.setIsRunningStatus(true);
     }.bind(this));
 
@@ -6044,6 +6043,8 @@ function (_Component) {
           };
         }.bind(this));
       }
+
+      this.trackerInput.focus();
     }
   }, {
     key: "render",
@@ -6053,7 +6054,11 @@ function (_Component) {
       var _this$state = this.state,
           newTimerName = _this$state.newTimerName,
           trackers = _this$state.trackers;
-      var trackersJSX = trackers.map(function (tracker) {
+      var trackersJSX = trackers.sort(function (firstTracker, lastTracker) {
+        newArrowCheck_default()(this, _this6);
+
+        return lastTracker.timeStamp - firstTracker.timeStamp;
+      }.bind(this)).map(function (tracker) {
         newArrowCheck_default()(this, _this6);
 
         return react_default.a.createElement(Timer_Timer, {
@@ -6074,7 +6079,12 @@ function (_Component) {
         placeholder: "Enter tracker name",
         type: "text",
         value: newTimerName,
-        onChange: this.updateNewTrackerName
+        onChange: this.updateNewTrackerName,
+        ref: function (input) {
+          newArrowCheck_default()(this, _this6);
+
+          this.trackerInput = input;
+        }.bind(this)
       }), react_default.a.createElement("button", {
         className: Tracker_styles_m_default.a.submitButton,
         type: "submit"
@@ -6800,4 +6810,4 @@ function _interopDefault(e){return e&&"object"==typeof e&&"default"in e?e.defaul
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=source.26664.js.map
+//# sourceMappingURL=source.49961.js.map

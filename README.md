@@ -8,6 +8,7 @@ Clone this repo and then in command line type:
 
 To launch app run `npm run start` or `yarn start` 
 
+gh-pages link → [Tracker](https://nazarenkodima.github.io/tracker/)
 
 ### Project commands
 Command name       | Description                                                      

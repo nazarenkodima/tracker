@@ -73,9 +73,13 @@ export default class Tracker extends Component {
     localStorage.setItem('trackers', JSON.stringify(newTrackers));
   };
 
+  sortTrackers = () => {
+
+  }
+
   render() {
     const { newTimerName, trackers } = this.state;
-    const trackersJSX = trackers.map((tracker) => (
+    const trackersJSX = trackers.sort((a,b) => b.timeStamp - a.timeStamp).map((tracker) => (
       <Timer
         key={tracker.id}
         name={tracker.name}

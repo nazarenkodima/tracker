@@ -138,7 +138,6 @@ export default class Timer extends Component {
   };
 
   startTimer = () => {
-    // this.handleTrackerTime();
     this.setIsRunningStatus(true);
   };
 
